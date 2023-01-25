@@ -1,0 +1,10 @@
+{
+    "parent": "fantasia:item/excrement_sword",
+    "textures": {
+        "layer0": "fantasia:item/poop_sword"
+    },
+    "overrides": [
+        {"predicate": {"glowing": 0},"model": "fantasia:item/poop_sword_normal"},
+        {"predicate": {"glowing": 1},"model": "fantasia:item/poop_sword_glowing"}
+    ]
+}

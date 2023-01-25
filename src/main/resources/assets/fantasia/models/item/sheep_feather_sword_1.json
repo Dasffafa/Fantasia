@@ -1,0 +1,17 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "item/handheld",
+	"textures": {
+		"layer0": "fantasia:item/sheep_feather_sword_1"
+	},
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [0, -88, 45],
+			"translation": [0, 6.25, 1]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [0, -270, -45],
+			"translation": [0, 7.25, 1]
+		}
+	}
+}

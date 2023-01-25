@@ -1,0 +1,62 @@
+{
+  "parent": "fantasia:item/sheep_feather_sword_1",
+  "textures": {
+    "layer0": "fantasia:item/sheep_feather_sword"
+  },
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [0, -90, 45],
+      "translation": [0, 7.25, 1]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [0, -270, -45],
+      "translation": [0, 7.25, 1]
+    }
+  },
+  "overrides": [
+  {
+    "predicate": {
+      "stored_attacks": 2
+    },
+    "model": "fantasia:item/sheep_feather_sword"
+  },
+  {
+    "predicate": {
+      "stored_attacks": 3
+    },
+    "model": "fantasia:item/sheep_feather_sword_1"
+  },
+  {
+    "predicate": {
+      "stored_attacks": 5
+    },
+    "model": "fantasia:item/sheep_feather_sword_2"
+  },
+    {
+      "predicate": {
+        "stored_attacks": 8
+      },
+      "model": "fantasia:item/sheep_feather_sword_3"
+    },
+    {
+      "predicate": {
+        "stored_attacks": 11
+      },
+      "model": "fantasia:item/sheep_feather_sword_4"
+    },
+    {
+      "predicate": {
+        "stored_attacks": 15
+      },
+      "model": "fantasia:item/sheep_feather_sword_5"
+    },
+    {
+      "predicate": {
+        "stored_attacks": 20
+      },
+      "model": "fantasia:item/sheep_feather_sword_6"
+    }
+  ]
+
+
+}

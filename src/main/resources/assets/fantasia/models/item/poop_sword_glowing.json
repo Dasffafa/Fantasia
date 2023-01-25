@@ -1,0 +1,6 @@
+{
+  "parent": "fantasia:item/excrement_sword",
+  "textures": {
+    "layer0": "fantasia:item/poop_sword_glowing"
+  }
+}

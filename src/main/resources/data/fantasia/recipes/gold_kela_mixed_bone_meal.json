@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#*#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:bone_meal"
+    },
+    "*": {
+      "item": "fantasia:gold_kela"
+    }
+  },
+  "result": {
+    "item": "fantasia:gold_kela_mixed_bone_meal",
+    "count": 8
+  }
+}

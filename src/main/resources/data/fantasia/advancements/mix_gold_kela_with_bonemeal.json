@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "fantasia:gold_kela_mixed_bone_meal"
+    },
+    "title": "两米下的氮磷钾！",
+    "description": "合成高效的金坷垃复合肥",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "fantasia:get_gold_kela",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "fantasia:gold_kela_mixed_bone_meal"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

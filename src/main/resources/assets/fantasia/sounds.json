@@ -1,0 +1,47 @@
+{
+  "hiccup": {
+    "subtitle": "sound.fantasia.hiccup",
+    "sounds": [
+      "fantasia:hiccup_1",
+      "fantasia:hiccup_2",
+      "fantasia:hiccup_3",
+      "fantasia:hiccup_4",
+      "fantasia:hiccup_5"
+    ]
+  },
+  "shit_hit": {
+    "subtitle": "sound.fantasia.shit_hit",
+    "sounds": [
+      "fantasia:shit_hit"
+    ]
+  },
+  "sheep_wing": {
+    "subtitle": "sound.fantasia.sheep_wing",
+    "sounds": [
+      "fantasia:sheep_wing"
+    ]
+  },
+  "sky_monkey": {
+    "subtitle": "sound.fantasia.sky_monkey",
+    "sounds": [
+      "fantasia:sky_monkey"
+    ]
+  },
+  "gold_kela_conflict": {
+    "subtitle": "sound.fantasia.gold_kela_conflict",
+    "sounds": [
+      "fantasia:gold_kela_conflict_1",
+      "fantasia:gold_kela_conflict_2",
+      "fantasia:gold_kela_conflict_3",
+      "fantasia:gold_kela_conflict_4",
+      "fantasia:gold_kela_conflict_5"
+    ]
+  },
+  "gold_kela_use": {
+    "subtitle": "sound.fantasia.gold_kela_use",
+    "sounds": [
+      "fantasia:gold_kela_use_1",
+      "fantasia:gold_kela_use_2"
+    ]
+  }
+}
