@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "fantasia:block/aetherium_ore3"
-  }
-}

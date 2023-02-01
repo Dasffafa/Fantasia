@@ -1,8 +1,8 @@
 {
   "variants": {
-    "facing=north": { "model": "fantasia:block/double_bang_firework" },
-    "facing=east": { "model": "fantasia:block/double_bang_firework", "y": 90 },
-    "facing=south": { "model": "fantasia:block/double_bang_firework", "y": 180 },
-    "facing=west": { "model": "fantasia:block/double_bang_firework", "y": 270 }
+    "facing=north": { "model": "fantasia:model/double_bang_firework" },
+    "facing=east": { "model": "fantasia:model/double_bang_firework", "y": 90 },
+    "facing=south": { "model": "fantasia:model/double_bang_firework", "y": 180 },
+    "facing=west": { "model": "fantasia:model/double_bang_firework", "y": 270 }
   }
 }

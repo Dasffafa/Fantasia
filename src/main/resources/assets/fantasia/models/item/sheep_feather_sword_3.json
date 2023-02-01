@@ -1,6 +1,6 @@
 {
   "parent": "fantasia:item/sheep_feather_sword_1",
   "textures": {
-    "layer0": "fantasia:item/sheep_feather_sword_3"
+    "layer0": "fantasia:item/sheep_feather_sword/with_3_charges"
   }
 }
