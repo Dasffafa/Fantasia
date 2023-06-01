@@ -13,9 +13,9 @@ import javax.annotation.ParametersAreNonnullByDefault;
 public class FantasiaRenderers {
     public static void registerRenderer() {
         EntityRenderers.register(FantasiaEntities.FLYING_SHIT.get(), ThrownItemRenderer::new);
-        EntityRenderers.register(FantasiaEntities.SHEEP_FEATHER.get(), ThrownItemRenderer::new);
+        EntityRenderers.register(FantasiaEntities.SHEEP_FEATHER.get(), SheepFeatherEntityRenderer::new);
         EntityRenderers.register(FantasiaEntities.PRIMED_DOUBLE_BANG_FIREWORK.get(), PrimedDoubleBangFireworkRenderer::new);
-//        EntityRenderers.register(FantasiaEntities.FEATHERED_SHEEP.get(), FeatheredSheepRenderer::new);
+        EntityRenderers.register(FantasiaEntities.FEATHERED_SHEEP.get(), FeatheredSheepRenderer::new);
     }
 
 

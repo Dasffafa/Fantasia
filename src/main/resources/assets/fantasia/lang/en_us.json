@@ -67,5 +67,7 @@
     "block.fantasia.double_bang_firework": "Double Bang Firework",
     "item.fantasia.sheep_item_sword.attack_bonus": "Accumulated attacks grant this sword a damage bonus of %.2f.",
     "item.fantasia.sheep_item_sword.attack_because_bloodthirst": "Your bloodthirsty sword forces your arm to attack!",
-    "entity.fantasia.primed_double_bang_firework": "Primed Double Bang Firework"
+    "entity.fantasia.primed_double_bang_firework": "Primed Double Bang Firework",
+    "item.fantasia.feathered_sheep_spawn_egg": "Summon Feathered Sheep",
+    "item.fantasia.shit_bucket": "Shit Fluid Bucket"
 }

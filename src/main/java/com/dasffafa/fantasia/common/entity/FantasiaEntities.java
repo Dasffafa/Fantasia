@@ -1,7 +1,7 @@
 package com.dasffafa.fantasia.common.entity;
 
 import com.dasffafa.fantasia.Fantasia;
-import com.dasffafa.fantasia.common.entity.living.FeatheredSheepEntity;
+import com.dasffafa.fantasia.common.entity.living.feathered_sheep.FeatheredSheepEntity;
 import com.dasffafa.fantasia.common.entity.projectile.FlyingShitEntity;
 import com.dasffafa.fantasia.common.entity.projectile.PrimedDoubleBangFirework;
 import com.dasffafa.fantasia.common.entity.projectile.SheepFeatherEntity;

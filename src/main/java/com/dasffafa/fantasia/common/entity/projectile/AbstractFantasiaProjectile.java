@@ -2,11 +2,14 @@ package com.dasffafa.fantasia.common.entity.projectile;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.EntityHitResult;
 import org.jetbrains.annotations.NotNull;
 
 public abstract class AbstractFantasiaProjectile extends Projectile {
@@ -62,7 +65,18 @@ public abstract class AbstractFantasiaProjectile extends Projectile {
     protected void onHitBlock(BlockHitResult pResult) {
         BlockPos pos = pResult.getBlockPos();
 
-        float collidedBlockHardness = level.getBlockState(pos).getBlock().defaultDestroyTime();
+        float collidedBlockDestroyTime = level.getBlockState(pos).getBlock().defaultDestroyTime();
+
+    }
+
+    @Override
+    protected void onHitEntity(EntityHitResult pResult) {
+        Entity entity = pResult.getEntity();
+        if (entity instanceof LivingEntity livingentity) {
+            entity.hurt(DamageSource.indirectMobAttack(this,livingentity),this.damage);
+        }
+
+
     }
 
     @Override

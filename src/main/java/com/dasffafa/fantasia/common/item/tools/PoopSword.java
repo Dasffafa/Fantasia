@@ -3,7 +3,6 @@ package com.dasffafa.fantasia.common.item.tools;
 import com.dasffafa.fantasia.Fantasia;
 import com.dasffafa.fantasia.client.particle.FantasiaParticles;
 import com.dasffafa.fantasia.common.entity.projectile.FlyingShitEntity;
-import com.dasffafa.fantasia.common.item.FantasiaNBTTags;
 import com.dasffafa.fantasia.common.utils.SpellHelper;
 import com.mojang.math.Vector3f;
 import net.minecraft.ChatFormatting;
@@ -27,6 +26,8 @@ import org.jetbrains.annotations.Nullable;
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.List;
+
+import static com.dasffafa.fantasia.common.utils.FantasiaNBTTags.POOP_SWORD_GLOWING;
 
 @MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault
@@ -60,7 +61,7 @@ public class PoopSword extends SwordItem {
 
     public boolean isGlowing(ItemStack stack) {
         CompoundTag tag = stack.getOrCreateTag();
-        return tag.getBoolean(FantasiaNBTTags.POOP_SWORD_GLOWING);
+        return tag.getBoolean(POOP_SWORD_GLOWING);
     }
 
     @Nonnull
@@ -73,7 +74,7 @@ public class PoopSword extends SwordItem {
         } else {
             pPlayer.displayClientMessage(new TranslatableComponent("item.fantasia.poop_sword.toggle_on"),true);
         }
-        tag.putBoolean(FantasiaNBTTags.POOP_SWORD_GLOWING,!isGlowing(itemInHand));
+        tag.putBoolean(POOP_SWORD_GLOWING,!isGlowing(itemInHand));
 
         return InteractionResultHolder.success(itemInHand);
     }

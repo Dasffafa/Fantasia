@@ -1,7 +1,7 @@
 package com.dasffafa.fantasia.client.models;
 
 import com.dasffafa.fantasia.Fantasia;
-import com.dasffafa.fantasia.common.entity.living.FeatheredSheepEntity;
+import com.dasffafa.fantasia.common.entity.living.feathered_sheep.FeatheredSheepEntity;
 import net.minecraft.resources.ResourceLocation;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
 

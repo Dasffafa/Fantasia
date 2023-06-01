@@ -7,6 +7,7 @@ package com.dasffafa.fantasia.common.utils.math;
 
 import com.mojang.math.Vector3f;
 import net.minecraft.util.Mth;
+import net.minecraft.world.phys.Vec3;
 
 import java.text.DecimalFormat;
 
@@ -30,6 +31,13 @@ public class Quaternion {
         this.k = v.z();
     }
 
+    public Quaternion(float re, Vec3 s) {
+        this.re = re;
+        this.i = (float) s.x();
+        this.j = (float) s.y();
+        this.k = (float) s.z();
+    }
+
     public float getRe() {
         return re;
     }
@@ -46,19 +54,19 @@ public class Quaternion {
         return k;
     }
 
-    public Vector3f getVectorPart(){
-        return new Vector3f(i,j,k);
+    public Vec3 getVectorPart(){
+        return new Vec3(i,j,k);
     }
 
     public Quaternion add(Quaternion other){
-        Vector3f s = getVectorPart();
+        Vec3 s = getVectorPart();
         s.add(other.getVectorPart());
         return new Quaternion(re+other.re , s);
     }
 
     public Quaternion minus(Quaternion other){
-        Vector3f s = getVectorPart();
-        s.sub(other.getVectorPart());
+        Vec3 s = getVectorPart();
+        s.add(other.getVectorPart().scale(-1));
         return new Quaternion(re + other.re,s);
     }
 
@@ -120,9 +128,9 @@ public class Quaternion {
     }
     /**
      * **/
-    public static Vector3f moveQ(Vector3f startV, Vector3f targetV, float maxAngle){
+    public static Vec3 moveQ(Vec3 startV, Vec3 targetV, float maxAngle){
 
-        float now = startV.dot(targetV) / (lengthOf(startV)*lengthOf(targetV));
+        double now = startV.dot(targetV) / (lengthOf(startV)*lengthOf(targetV));
         float maxCos = Mth.cos((float) (maxAngle*Math.PI/180));
         float maxSin = Mth.sin((float) (maxAngle*Math.PI/180));
         if(now >= maxCos){
@@ -136,7 +144,7 @@ public class Quaternion {
 
         return rotate.multPolImpl(start).multPolImpl(rotate.conjugate()).getVectorPart();
     }
-    public static float lengthOf(Vector3f vec) {
+    public static float lengthOf(Vec3 vec) {
         return Mth.sqrt((float) (Math.pow(vec.x(), 2 )+Math.pow(vec.x(), 2)+Math.pow(vec.x(), 2)));
     }
 }

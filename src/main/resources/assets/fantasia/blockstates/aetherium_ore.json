@@ -1,9 +1,0 @@
-{
-  "variants": {
-    "purity=1": { "model": "fantasia:block/aetherium_ore_model_1" },
-    "purity=2": { "model": "fantasia:block/aetherium_ore_model_2" },
-    "purity=3": { "model": "fantasia:block/aetherium_ore_model_3" },
-    "purity=4": { "model": "fantasia:block/aetherium_ore_model_4" },
-    "purity=5": { "model": "fantasia:block/aetherium_ore_model_5" }
-  }
-}

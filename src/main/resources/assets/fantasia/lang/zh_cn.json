@@ -67,5 +67,7 @@
   "block.fantasia.double_bang_firework": "二踢脚",
   "item.fantasia.sheep_item_sword.attack_bonus": "羊羽剑上积聚的血液正在明亮地发光，赋予这把剑大约%.2f的额外伤害。",
   "item.fantasia.sheep_item_sword.attack_because_bloodthirst": "你的嗜血的剑拽着你的胳膊攻击！",
-  "entity.fantasia.primed_double_bang_firework": "点燃的二踢脚"
+  "entity.fantasia.primed_double_bang_firework": "点燃的二踢脚",
+  "item.fantasia.feathered_sheep_spawn_egg": "生成 羽羊",
+  "item.fantasia.shit_bucket": "屎液桶"
 }

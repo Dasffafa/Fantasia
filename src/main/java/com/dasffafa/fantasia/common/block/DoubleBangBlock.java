@@ -3,6 +3,7 @@ package com.dasffafa.fantasia.common.block;
 import com.dasffafa.fantasia.common.entity.projectile.PrimedDoubleBangFirework;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
@@ -19,12 +20,12 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.Mirror;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.phys.BlockHitResult;
@@ -97,10 +98,20 @@ public class DoubleBangBlock extends Block {
     }
     private static void explode(Level pLevel, BlockPos pPos, @Nullable LivingEntity pEntity) {
         if (!pLevel.isClientSide) {
-            PrimedDoubleBangFirework doubleBangFirework = new PrimedDoubleBangFirework(pLevel, (double)pPos.getX() + 0.5D, (double)pPos.getY(), (double)pPos.getZ() + 0.5D, pEntity);
+            PrimedDoubleBangFirework doubleBangFirework = new PrimedDoubleBangFirework(pLevel, pPos.getX() + 0.5D, pPos.getY(), pPos.getZ() + 0.5D, pEntity);
             pLevel.addFreshEntity(doubleBangFirework);
             pLevel.playSound(null, doubleBangFirework.getX(), doubleBangFirework.getY(), doubleBangFirework.getZ(), SoundEvents.TNT_PRIMED, SoundSource.BLOCKS, 1.0F, 1.0F);
             pLevel.gameEvent(pEntity, GameEvent.PRIME_FUSE, pPos);
         }
+    }
+
+    @Override
+    public void neighborChanged(BlockState pState, Level pLevel, BlockPos pPos, Block pBlock, BlockPos pFromPos, boolean pIsMoving) {
+        super.neighborChanged(pState, pLevel, pPos, pBlock, pFromPos, pIsMoving);
+    }
+
+    @Override
+    public boolean canConnectRedstone(BlockState state, BlockGetter level, BlockPos pos, @org.jetbrains.annotations.Nullable Direction direction) {
+        return true;
     }
 }

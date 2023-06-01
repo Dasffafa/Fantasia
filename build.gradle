@@ -19,7 +19,7 @@ plugins {
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.parchmentmc.librarian.forgegradle'
 
-version = '1.0.11'
+version = '1.0.12'
 group = 'com.dasffafa.fantasia' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'fantasia'
 

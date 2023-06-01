@@ -1,5 +1,7 @@
 {
-    "variants": {
-      "": { "model": "fantasia:block/shit_block"}
+  "variants": {
+    "": {
+      "model": "fantasia:block/shit_block"
     }
   }
+}

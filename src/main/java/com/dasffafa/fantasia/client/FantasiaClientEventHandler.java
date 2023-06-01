@@ -2,7 +2,7 @@ package com.dasffafa.fantasia.client;
 
 import com.dasffafa.fantasia.client.renderer.FantasiaRenderers;
 import com.dasffafa.fantasia.common.item.FantasiaItems;
-import com.dasffafa.fantasia.common.item.FantasiaNBTTags;
+import com.dasffafa.fantasia.common.utils.FantasiaNBTTags;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
@@ -15,6 +15,9 @@ public class FantasiaClientEventHandler {
     @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
         FantasiaRenderers.registerRenderer();
+
+//        ItemBlockRenderTypes.setRenderLayer(FantasiaFluids.SHIT_FLUID.get(), RenderType.solid());
+//        ItemBlockRenderTypes.setRenderLayer(FantasiaFluids.SHIT_FLOWING.get(), RenderType.solid());
         event.enqueueWork(FantasiaClientEventHandler::registerPropertyOverride);
     }
 

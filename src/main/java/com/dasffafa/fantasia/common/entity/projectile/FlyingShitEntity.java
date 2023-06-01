@@ -55,7 +55,7 @@ public class FlyingShitEntity extends ThrowableItemProjectile implements ItemSup
             this.level.playSound(
                     null,
                     this.getX(), this.getY(), this.getZ(),
-                    FantasiaSounds.SHIT_HIT.get(),
+                    FantasiaSounds.PUJIPA.get(),
                     SoundSource.PLAYERS,
                     1.0f, 1.0f
             );
@@ -72,7 +72,7 @@ public class FlyingShitEntity extends ThrowableItemProjectile implements ItemSup
 
     @Override
     protected void onHit(HitResult result) {
-        this.level.playSound(null, this.getX(), this.getY(), this.getZ(),FantasiaSounds.SHIT_HIT.get(),SoundSource.VOICE,1.0f,1.0f);
+        this.level.playSound(null, this.getX(), this.getY(), this.getZ(),FantasiaSounds.PUJIPA.get(),SoundSource.VOICE,1.0f,1.0f);
         this.level.broadcastEntityEvent(this, (byte) 3);
         if (result.getType() == HitResult.Type.ENTITY) {
             var entity = ((EntityHitResult) result).getEntity();

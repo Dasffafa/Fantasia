@@ -16,9 +16,9 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
-import org.jetbrains.annotations.Nullable;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.List;
 
@@ -46,6 +46,15 @@ public class GoldKela extends Item {
                 1.0f
         );
 
+        applyGoldKelaEffect(eater);
+        if (world.isClientSide){
+            eater.sendMessage(new TranslatableComponent("item.fantasia.gold_kela.use"), eater.getUUID());
+        }
+        pStack.shrink(1);
+        return pStack;
+    }
+
+    public static void applyGoldKelaEffect(LivingEntity eater) {
         eater.playSound(FantasiaSounds.GOLD_KELA_USE.get(), 1.0F, 1.0F);
         eater.addEffect(new MobEffectInstance(MobEffects.REGENERATION,1200,1));
         eater.addEffect(new MobEffectInstance(MobEffects.GLOWING,1200));
@@ -53,11 +62,7 @@ public class GoldKela extends Item {
         eater.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST,1200,2));
         eater.addEffect(new MobEffectInstance(MobEffects.SATURATION,1200));
         eater.addEffect(new MobEffectInstance(FantasiaEffects.GOLD_KELA_HICCUP.get(),1200,1));
-        if (world.isClientSide){
-            eater.sendMessage(new TranslatableComponent("item.fantasia.gold_kela.use"), eater.getUUID());
-        }
-        pStack.shrink(1);
-        return pStack;
+        eater.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 1200, 2));
     }
 
     @Override

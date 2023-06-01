@@ -1,5 +1,7 @@
 {
-    "variants": {
-      "": { "model": "fantasia:block/test_block"}
+  "variants": {
+    "": {
+      "model": "fantasia:block/first_block"
     }
   }
+}

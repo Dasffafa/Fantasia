@@ -1,15 +1,14 @@
 package com.dasffafa.fantasia.common.effects;
 
-import com.dasffafa.fantasia.common.utils.FantasiaSounds;
 import com.dasffafa.fantasia.common.utils.FantasiaDamageSources;
+import com.dasffafa.fantasia.common.utils.FantasiaSounds;
 import net.minecraft.network.chat.TranslatableComponent;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 
 import java.util.Random;
 
@@ -29,8 +28,10 @@ public class HiccupEffect extends MobEffect {
         switch (random.nextInt(10)) {
             case 1:
                 if (entityLivingBaseIn instanceof Player player) {
-                    player.drop(player.getItemInHand(InteractionHand.MAIN_HAND), true, false);
-                    player.setItemInHand(InteractionHand.MAIN_HAND, new ItemStack(Items.AIR));
+                    Inventory inventory = player.getInventory();
+                    ItemStack selected = inventory.getSelected();
+                    player.drop(selected,false);
+                    inventory.removeItem(selected);
                     if (player.level.isClientSide) {
                         player.displayClientMessage(new TranslatableComponent("effect.fantasia.hiccup.drop"), true);
                     }
@@ -44,7 +45,7 @@ public class HiccupEffect extends MobEffect {
         entityLivingBaseIn.setDeltaMovement(
                 entityLivingBaseIn.getDeltaMovement().add(
                         0.3 * amplifier * random.nextFloat() - 0.15,
-                        0.25 * amplifier,
+                        0.35 * amplifier,
                         0.3 * amplifier * random.nextFloat() - 0.15
                 )
         );
@@ -52,6 +53,6 @@ public class HiccupEffect extends MobEffect {
 
     @Override
     public boolean isDurationEffectTick(int pDuration, int pAmplifier) {
-        return pDuration % 40 == 0;
+        return pDuration % 40 == 10;
     }
 }

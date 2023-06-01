@@ -1,7 +1,7 @@
 {
   "parent": "fantasia:item/sheep_feather_sword_1",
   "textures": {
-    "layer0": "fantasia:item/sheep_feather_sword"
+    "layer0": "fantasia:item/sheep_feather_sword/with_1_charge"
   },
   "display": {
     "thirdperson_righthand": {
@@ -17,12 +17,6 @@
   {
     "predicate": {
       "stored_attacks": 2
-    },
-    "model": "fantasia:item/sheep_feather_sword"
-  },
-  {
-    "predicate": {
-      "stored_attacks": 3
     },
     "model": "fantasia:item/sheep_feather_sword_1"
   },
